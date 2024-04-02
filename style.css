@@ -13,6 +13,19 @@ body {
 }
 
 /* #0B0B0B */
+
+#crsr {
+    height: 2.5vw;
+    width: 2.5vw;
+    /* background-color: white; */
+    position: fixed;
+    border: 1px solid rgb(239, 236, 236);
+    border-radius: 50%;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+}
+
 #main {
     position: relative;
     background-color: #111;
@@ -75,19 +88,21 @@ body {
     text-transform: uppercase;
     /* animation-name: anime; */
     animation-duration: 1.2s;
+    opacity: 0;
     animation-iteration-count: infinite;
 }
 
 @keyframes anime {
     0% {
         font-family: "plain light";
-        -webkit-text-stroke:1px #fff;
+        -webkit-text-stroke: 1px #fff;
         color: #fff;
         opacity: 1;
     }
+
     45% {
         font-family: "plain light";
-        -webkit-text-stroke:1px #fff;
+        -webkit-text-stroke: 1px #fff;
         color: #fff;
         opacity: 0;
 
@@ -95,17 +110,80 @@ body {
 
     50% {
         font-family: "silk serif";
-        -webkit-text-stroke:1px #fff;
-        color:transparent;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
         opacity: 1;
 
     }
+
     100% {
         font-family: "silk serif";
-        -webkit-text-stroke:1px #fff;
-        color:transparent;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
         opacity: 0;
 
 
     }
+}
+
+#page1 #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 4vw;
+}
+
+#nav-part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+#nav-part2 h4 {
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.hero {
+    /* background-color: red; */
+    width: 72%;
+    margin-left: 27%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+
+.hero h1,
+.hero h3 {
+    /* font-size: 7vw;
+    font-weight: 500;
+    text-transform: uppercase; */
+    /* text-align: center; */
+    /* line-height: 7.2vw; */
+}
+
+.hero h1 {
+    font-size: 7vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* text-align: center; */
+    line-height: 7.2vw;
+}
+
+.hero:nth-child(2) {
+    margin-top: 12vh;
+}
+/* 
+#web{
+    text-decoration: underline;
+} */
+
+
+#web:hover{
+    -webkit-text-stroke: 1px #fff;
+    color:transparent;
 }
